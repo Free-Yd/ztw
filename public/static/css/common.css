@@ -1,0 +1,378 @@
+@charset "utf-8";
+html,
+body,
+#app,
+.app_index,
+.app_container,
+.app_content_box {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+body input,
+body textarea,
+body select,
+body button {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+b {
+  font-weight: normal;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix::after {
+  clear: both;
+  display: block;
+  content: ""
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.bg-success {
+  background-color: #67c23a !important;
+}
+
+.bg-warning {
+  background-color: #e6a23c !important;
+}
+
+.bg-danger {
+  background-color: #f56c6c !important;
+}
+
+.bg-info {
+  background-color: #909399 !important;
+}
+
+.bg-primary {
+  background-color: #409eff !important;
+}
+
+.font-success {
+  color: #67c23a !important;
+}
+
+.font-warning {
+  color: #e6a23c !important;
+}
+
+.font-danger {
+  color: #f56c6c !important;
+}
+
+.font-info {
+  color: #909399 !important;
+}
+
+.font-primary {
+  color: #409eff !important;
+}
+
+.buttonText {
+  color: #409EFF;
+  text-decoration: none;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, .3);
+}
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #c0c4cc;
+}
+
+/* ::-webkit-scrollbar        滚动条整体部分，其中的属性有width,height,background,border（就和一个块级元素一样）等。
+::-webkit-scrollbar-button      滚动条两端的按钮。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果。
+::-webkit-scrollbar-track         外层轨道。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果。
+::-webkit-scrollbar-track-piece        内层轨道，滚动条中间部分（除去）。
+::-webkit-scrollbar-thumb               滚动条里面可以拖动的那部分
+::-webkit-scrollbar-corner               边角
+::-webkit-resizer                       定义右下角拖动块的样式 */
+
+.animated {
+  -webkit-animation-duration: .45s;
+  animation-duration: .45s;
+}
+
+.app_main .animated {
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+}
+
+/*     ----------------------------------------     header start     ----------------------------------------     */
+
+.el-header {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: solid 1px #e6e6e6;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+}
+
+.app_menu {
+  font-size: 24px;
+  color: #409EFF;
+  line-height: 60px;
+  cursor: pointer;
+  transition: .35s;
+  transform: translateX(15px) scale(1.125) rotate(180deg);
+}
+
+.app_menu[title="true"] {
+  color: #545c64;
+  transform: translateX(0px) scale(1) rotate(0deg);
+}
+
+.app_header .el-menu-demo {
+  border-bottom: none;
+}
+
+.app_header .el-menu-demo li .app_badge {
+  height: 30px;
+  line-height: 30px;
+}
+
+.app_header .el-menu-demo li .app_badge {
+  height: 30px;
+  line-height: 30px;
+}
+
+.app_exit .el-icon-arrow-right {
+  line-height: 36px;
+}
+
+/*     ----------------------------------------     header end     ----------------------------------------     */
+
+/*     ----------------------------------------     aside start     ----------------------------------------     */
+
+.app_aside {
+  height: 100%;
+}
+
+.el-menu-vertical-demo {
+  width: 200px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/*     ----------------------------------------     aside end     ----------------------------------------     */
+
+/*     ----------------------------------------     main start     ----------------------------------------     */
+
+.app_main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/*     ----------------------------------------     main end     ----------------------------------------     */
+
+/*     ----------------------------------------     breadcrumb start     ----------------------------------------     */
+
+.app_breadcrumb {
+  height: 14px;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+.app_breadcrumb .el-breadcrumb__inner a,
+.app_breadcrumb .el-breadcrumb__inner.is-link {
+  color: #409EFF;
+}
+
+/*     ----------------------------------------     breadcrumb end     ----------------------------------------     */
+
+/*     ----------------------------------------     content start     ----------------------------------------     */
+
+.app_content_box {
+  width: 100%;
+  height: calc(100% - 34px);
+  overflow-y: auto;
+}
+
+.tip {
+  padding: 8px 16px;
+  background-color: #ecf8ff;
+  border-radius: 4px;
+  border-left: 5px solid #50bfff;
+  margin: 10px 0;
+}
+
+.tip.small {
+  font-size: 14px;
+}
+
+.tip p {
+  line-height: 1em;
+}
+
+.app_MemberCenter .tip {
+  margin: 20px 0;
+}
+
+.app_AddKeyword .tip p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.app_content_box .tip p {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info_title h3 {
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: #1f2f3d;
+}
+
+.info_title p {
+  font-size: 14px;
+  color: #5e6d82;
+  line-height: 1.5em;
+}
+
+.app_pages {
+  margin-top: 10px;
+  width: 100%;
+  overflow: auto;
+}
+
+.app_search {
+  margin: 10px 0;
+  padding: 16px 10px;
+  height: 32px;
+  background-color: #F4F4F4;
+}
+
+.app_search_box {
+  margin-left: 240px;
+  overflow: auto;
+}
+
+.app_search .demo-form-inline {
+  display: inline-block;
+  width: 870px
+}
+
+.app_search .demo-form-inline .el-form-item {
+  margin-bottom: 0;
+}
+
+.app_table {
+  min-height: 300px;
+}
+
+.app_table.el-table thead {
+  color: #63656b;
+}
+
+.add_form {
+  margin-top: 30px;
+}
+
+.add_form .addTextarea textarea {
+  height: 200px;
+}
+
+.form_hint {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #8492a6;
+}
+
+/*     ----------------------------------------     content end     ----------------------------------------     */
+
+/*     ----------------------------------------     login start     ----------------------------------------     */
+
+.app_login {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/login_bg.jpg) no-repeat center center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  display: -webkit-flex;
+}
+
+.app_login .app_login_mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.225);
+}
+
+.login-container {
+  position: relative;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-clip: padding-box;
+  width: 350px;
+  padding: 35px 35px 15px 35px;
+  background: #fff;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-container .title {
+  margin: 0px auto 40px auto;
+  text-align: center;
+  color: #505458;
+}
+
+.login-container .register {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.login-container .text {
+  font-size: 12px;
+}
+
+/*     ----------------------------------------     login end     ----------------------------------------     */
