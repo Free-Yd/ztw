@@ -11,10 +11,11 @@ router.get('/', function (req, res, next) {
     height: 40
   });
   //req.session.captcha = captcha.text;
-  //req.session.captcha = captcha.text.toLowerCase(); //存session用于验证接口获取文字码
+  req.session.captcha = captcha.text.toLowerCase(); //存session用于验证接口获取文字码
 
   res.type('svg');
   res.status(200).send(captcha.data);
+  console.log(captcha)
 });
 
 module.exports = router;
