@@ -10,12 +10,12 @@ router.get('/', function (req, res, next) {
     noise: 4, // 干扰线条的数量
     height: 40
   });
-  //req.session.captcha = captcha.text;
-  req.session.captcha = captcha.text.toLowerCase(); //存session用于验证接口获取文字码
+  req.session.captcha = captcha.text.toLowerCase(); //存session用于验证获取文字码
+  req.session.save();
 
   res.type('svg');
   res.status(200).send(captcha.data);
-  console.log(captcha)
+  console.log(captcha.text)
 });
 
 module.exports = router;
