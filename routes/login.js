@@ -8,21 +8,15 @@ router.post('/', function (req, res, next) {
         checkCode = req.body.checkCode,
         sessionCaptcha = req.session.captcha;
     if (sessionCaptcha != checkCode) {
-        res.send({
-            code: 500,
-            error: '验证码不正确'
-        })
+        res.send('3')
     } else {
-        res.send({
-            code: 200,
-            msg: "操作成功",
-            item: {
-                name: username,
-                password: password,
-                checkCode: checkCode
-            },
-            error: ''
-        });
+        res.send('1')
+        // res.send({
+        //     status: 200,
+        //     ok: true,
+        //     body: '1',
+        //     msg: `登录成功，用户名为${username}，密码为${password}，验证码为${checkCode}`
+        // });
     }
 
 });
