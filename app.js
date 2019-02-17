@@ -24,11 +24,11 @@ app.use(session({
         maxAge: 1000 * 60 * 3//cookie过期时间，毫秒
     }
 }));
+    
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/GetVerifyCode', svgCaptchaRouter);
 app.use('/api/Login', LoginRouter);
-    
-app.use(express.static(path.join(__dirname, 'public')));
 
 module.exports = app;
