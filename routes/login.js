@@ -7,7 +7,7 @@ router.post('/', function (req, res, next) {
         password = req.body.password,
         checkCode = req.body.checkCode,
         sessionCaptcha = req.session.captcha;
-    if (sessionCaptcha != captcha) {
+    if (sessionCaptcha != checkCode) {
         res.send({
             code: 500,
             error: '验证码不正确'
