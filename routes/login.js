@@ -10,7 +10,7 @@ router.post('/', function (req, res, next) {
     if (sessionCaptcha != checkCode) {
         res.send('3')
     } else {
-        res.send('1')
+        res.send('1|yaoda')
         // res.send({
         //     status: 200,
         //     ok: true,
