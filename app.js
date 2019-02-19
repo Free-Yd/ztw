@@ -1,16 +1,14 @@
 var express = require('express');
-var mysql = require('mysql');
+//var mysql = require('mysql');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var logger = require('morgan'); //请求日志
 
-var mysqlConfig = require('./util/mysqlConfig');
-var indexRouter = require('./routes/index');
-var svgCaptchaRouter = require('./routes/svgCaptcha');
-var LoginRouter = require('./routes/login');
-var userInfoRouter = require('./routes/userInfo');
-var groupListRouter = require('./routes/groupList');
+//数据库相关
+//var mysqlConfig = require('./config/mysql');
+//mysql.createConnection(mysqlConfig.mysqlInfo).connect();
+var routersConfig = require('./config/routers');
 
 var app = express();
 
@@ -33,12 +31,6 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-//mysql.createConnection(mysqlConfig.mysqlInfo).connect();
-
-app.use('/', indexRouter);
-app.use('/api/GetVerifyCode', svgCaptchaRouter);
-app.use('/api/Login', LoginRouter);
-app.use('/api/UserInfo', userInfoRouter);
-app.use('/api/group_list', groupListRouter);
+routersConfig(app);
 
 module.exports = app;

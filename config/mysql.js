@@ -1,5 +1,6 @@
-var connction = {};
+//配置数据库
 
+var connction = {};
 connction.mysqlInfo = {
     host: "localhost", //数据库的地址
     user: "root", //用户名字
