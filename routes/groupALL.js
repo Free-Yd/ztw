@@ -5,14 +5,13 @@ var router = express.Router();
 router.post('/', function (req, res, next) {
     let userid = req.body.userid;
     if (userid) {
-        res.send({
-            Account: 'A会员',
-            gradeName: '星钻会员',
-            Amount: '1000',
-            KeyCount: 50,
-            KeyMaxCount: 100,
-            Mobile: '11111111111'
-        })
+        res.send([{
+            ID: 2,
+            GroupName: '优化中',
+        }, {
+            ID: 1,
+            GroupName: '暂停',
+        }])
     }
 });
 
