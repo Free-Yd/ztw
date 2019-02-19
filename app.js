@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var svgCaptchaRouter = require('./routes/svgCaptcha');
 var LoginRouter = require('./routes/login');
 var userInfoRouter = require('./routes/userInfo');
+var groupListRouter = require('./routes/groupList');
 
 var app = express();
 
@@ -38,5 +39,6 @@ app.use('/', indexRouter);
 app.use('/api/GetVerifyCode', svgCaptchaRouter);
 app.use('/api/Login', LoginRouter);
 app.use('/api/UserInfo', userInfoRouter);
+app.use('/api/group_list', groupListRouter);
 
 module.exports = app;
